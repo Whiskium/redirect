@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  width: 80%;
+  text-align: center;
+}
+
+input {
+  border: none;
+  border-radius: 26px;
+  box-shadow: inset 0 0 10px #00000059;
+  font-size: 1.5em;
+  height: 52px;
+  margin: 10px auto;
+  outline: none;
+  padding: 0 26px;
+  width: calc(100% - 4px - 52px);
+}
+
+p {
+  margin: 20px;
+}
+
+css-doodle {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.card {
+  animation: fadeIn .3s;
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  filter: drop-shadow(0 0 10px #00000059);
+  padding: 20px;
+  width: 80vw;
+  max-width: 500px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card-info {
+  font-size: 1.5em;
+}
+
+.card-option {
+  color: #2196f3;
+  font-size: 1.5em;
+}
+
+.redirection {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    filter: opacity(0) drop-shadow(0 0 10px #00000000);
+    transform: scale(.8);
+  }
+  to {
+    filter: opacity(100) drop-shadow(0 0 10px #00000059);
+    transform: scale(1);
+  }
+}

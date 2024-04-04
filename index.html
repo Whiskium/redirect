@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>重定向</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon-dark.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.38.4/css-doodle.min.js"></script>
+</head>
+
+<body>
+  <css-doodle>
+    @grid: 24;
+
+    @random {
+      border-left: 1px solid #000;
+    }
+    @random {
+      border-top: 1px solid #000;
+    }
+    @random(.25) {
+      background: linear-gradient(
+        @p(#E7ADAC, #EBC1A8, #A6BAAF, #ACD4D6), @lp
+      )
+      50% / @r(60%) @lr
+      no-repeat;
+    }
+  </css-doodle>
+  <div class="container">
+    <div class="card no-target">
+      <p class="card-title">提示</p>
+      <p class="card-info">未检测到跳转目标！</p>
+      <p class="card-option" onclick="input()">输入跳转目标</p>
+    </div>
+  
+    <div class="card redirection">
+      <p class="card-title">跳转</p>
+      <form onkeypress="return event.keyCode != 13;">
+        <input type="text" placeholder="请输入跳转目标">
+        <p class="card-option" onclick="redirect()">跳转</p>
+        <p class="card-option" onclick="back()">返回</p>
+      </form>
+    </div>
+  </div>
+
+  <script>redirect_init()</script>
+</body>
+</html>
