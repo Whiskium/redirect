@@ -2,6 +2,7 @@ function redirect() {
   let value = document.querySelector('input').value
   if (value.includes('://')) {
     document.querySelector('.card-info').innerHTML = `正在跳转至 ${value}`
+    document.querySelector('.card-option').innerHTML = `取消`
     back()
     document.querySelector('iframe').setAttribute('src', value)
   }
