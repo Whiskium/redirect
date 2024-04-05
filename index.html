@@ -3,7 +3,7 @@
 <head>
   <title>重定向</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://github.githubassets.com/favicons/favicon-dark.png" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.38.4/css-doodle.min.js"></script>
@@ -30,20 +30,20 @@
   <div class="container">
     <div class="card no-target">
       <p class="card-title">提示</p>
-      <p class="card-info">未检测到跳转目标！</p>
+      <p class="card-info">未检测到跳转目标</p>
       <p class="card-option" onclick="input()">输入跳转目标</p>
     </div>
-  
+
     <div class="card redirection">
       <p class="card-title">跳转</p>
       <form onkeypress="return event.keyCode != 13;">
-        <input type="text" placeholder="请输入跳转目标">
+        <input type="text" placeholder="xx://xx">
         <p class="card-option" onclick="redirect()">跳转</p>
         <p class="card-option" onclick="back()">返回</p>
       </form>
     </div>
   </div>
-
+  <iframe src="" width="0" height="0"></iframe>
   <script>redirect_init()</script>
 </body>
 </html>
